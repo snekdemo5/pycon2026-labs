@@ -21,7 +21,7 @@ def get_connection():
 
 
 def main():
-    notes_path = Path("data/notes.json")
+    notes_path = Path(__file__).resolve().parent / "data" / "notes.json"
 
     with notes_path.open("r", encoding="utf-8") as file:
         notes = json.load(file)
